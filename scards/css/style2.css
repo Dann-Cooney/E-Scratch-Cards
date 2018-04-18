@@ -1,0 +1,351 @@
+<style>
+@import "//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css";
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+/*  ----------------------body----------------------  */
+body {
+    margin: 0 0 100px;/* bottom has to be the same as footer height */
+    margin-top:  120px;
+
+}
+/*  ----------------------/body----------------------  */
+/*  ----------------------footer----------------------  */
+footer {
+    background-color: #D0D3D4;
+    border-top: 1px solid #D0D3D4;
+    text-align:center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    padding-bottom: 10px;
+    height: 40px;
+    width: 100%;
+  
+}
+
+@media only screen and (max-width: 767px)
+{
+footer {
+  background-color: #D0D3D4;
+    border-top: 1px solid #D0D3D4;
+    text-align:center;
+padding:20px;
+position:fixed;
+left:0;
+bottom:0;
+width:100%
+}
+
+
+
+}
+
+
+
+
+
+/*  ----------------------/footer----------------------  */
+
+/*  ----------------------navbar----------------------  */
+.navbar 
+{
+    min-height: 90px;
+}
+
+ nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+nav.stroke ul li a,
+  nav.fill ul li a {
+    position: relative;
+  }
+  nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+  }
+
+  nav.fill ul li a {
+    transition: all 2s;
+  }
+
+  nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+  }
+  nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+  }
+  nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
+  @-webkit-keyframes fill {
+    0% {
+      width: 0%;
+      height: 1px;
+    }
+    50% {
+      width: 100%;
+      height: 1px;
+    }
+    100% {
+      width: 100%;
+      height: 95%;
+      padding-bottom: 5px;
+      background: #2D9AC3;
+    }
+  }
+
+.navbar-inverse{
+  background-color: #D0D3D4;
+  border-color: #D0D3D4;
+  padding-bottom: 5px;
+}
+  .brand {
+      position: absolute;
+      left: 50%;
+      margin-left: -50px !important;  /* 50% of your logo width */
+      display: block;
+
+  }
+  }
+  .navbar-brand {
+    padding: 0 15px;
+    height: 80px;
+    line-height: 80px;
+  }
+
+  .navbar-toggle {
+
+    margin-top: 23px;
+    padding: 9px 10px !important;
+  }
+
+  @media (min-width: 768px) {
+    .navbar-nav > li > a {
+      padding-top: 26.5px;
+      padding-bottom: 26.5px;
+      line-height: 27px;
+    }
+  }
+
+/*  ----------------------/navbar----------------------  */
+/*  ----------------------positioning----------------------  */
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+/* ----------------------/positioning----------------------  */
+
+/* ----------------------input boxes----------------------  */
+.main-login{
+  background-color: #fff;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+.login-register{
+  font-size: 11px;
+  text-align: center;
+}
+.main-center{
+  margin-top: 30px;
+  margin: 0 auto;
+  max-width: 330px;
+    padding: 40px 40px;
+
+}
+.login-button{
+  margin-top: 5px;
+}
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 3px;
+}
+.form-group{
+  margin-bottom: 15px;
+}
+label{
+  margin-bottom: 15px;
+}
+
+/* ----------------------/input boxes----------------------  */
+
+/* ----------------------select boxes----------------------  */
+/* -------------------- Select Box Styles: stackoverflow.com Method */
+/* -------------------- Source: http://stackoverflow.com/a/5809186 */
+select#soflow, select#soflow-color {
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   color: #555;
+   font-size: inherit;
+   overflow: hidden;
+   padding: 5px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 210px;
+}
+
+/* ----------------------/select boxes----------------------  */
+
+table {
+     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+   background-color: #f2f2f2;
+}
+
+tr:hover {background-color: #ddd;}
+
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #337ab7;
+    color: white;
+}
+
+
+.creditCardForm label {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.creditCardForm .heading h1 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #4c4e56;
+}
+
+.creditCardForm .payment {
+    float: left;
+    font-size: 18px;
+    padding: 10px 25px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.creditCardForm .payment .form-group {
+    float: left;
+    margin-bottom: 15px;
+}
+
+.creditCardForm .payment .form-control {
+    line-height: 30px;
+    height: auto;
+    padding: 0 16px;
+}
+
+.creditCardForm .owner {
+    width: 50%;
+    margin-right: 10px;
+}
+
+.creditCardForm .CVV {
+    width: 35%;
+}
+
+.creditCardForm #card-number-field {
+    width: 100%;
+}
+
+.creditCardForm #expiration-date {
+    width: 30%;
+}
+
+.creditCardForm #credit_cards {
+    width: 100%;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.creditCardForm #pay-now {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.creditCardForm .payment .btn {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 24px;
+    background-color: #2ec4a5;
+    color: white;
+}
+
+.creditCardForm .payment select {
+    padding: 2px;
+    margin-right: 15px;
+    height: 30px;
+    
+
+}
+
+.transparent {
+    opacity: 0.2;
+}
+
+@media(max-width: 650px) {
+    .creditCardForm .owner,
+    .creditCardForm .CVV,
+    .creditCardForm #expiration-date,
+    .creditCardForm #credit_cards {
+        width: 100%;
+    }
+    .creditCardForm #credit_cards {
+        text-align: left;
+    }
+}
+
+</style>
